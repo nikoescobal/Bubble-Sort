@@ -3,10 +3,8 @@
 def bs(array)
   array.each_with_index do |a, x|
     array.each_with_index do |b, y|
-      if array[y + 1] != nil
-        if array[y] > array[y + 1]
-          array[y], array[y + 1] = array[y + 1], array[y]
-        end
+      if array[y + 1] != nil && array[y] > array[y + 1]
+        array[y], array[y + 1] = array[y + 1], array[y]
       end
     end
   end

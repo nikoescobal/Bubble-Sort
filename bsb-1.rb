@@ -4,3 +4,36 @@
 #   > end
 #   => ["hi", "hey", "hello"] 
 
+def bubble_sort_by(&ah)
+return "shit" unless block_given? 
+ah.call 6, 2
+end
+
+# bubble_sort_by do |y, z|
+#   puts y - z
+#   puts y * 10, z * 2
+# end 
+
+# lol_poo = -> {puts "lol"}
+
+
+# lol_poo.call
+
+# t = Proc.new { |x,y| puts "I don't care about arguments!" }
+# t.call
+
+# # Should work
+# my_lambda = -> { return 1 }
+# puts "Lambda result: #{my_lambda.call}"
+# # Should raise exception
+# my_proc = Proc.new { return 1 }
+# puts "Proc result: #{my_proc.call}"
+
+def call_proc
+  puts "Before proc"
+  my_proc = Proc.new { return 2 }
+  my_proc.call
+  puts "After proc"
+end
+p call_proc
+# Prints "Before proc" but not "After proc"
